@@ -1,3 +1,11 @@
+:root{
+
+    background-color: white;
+    text-color: black;
+    
+
+}
+
 body{
 
     margin: 0;
@@ -15,15 +23,7 @@ body{
 
 /* Acima eu determino as cores que serão o padrão da página, com a possibilidade de serem modificadas */
 
-body.dark-mode{
 
-    background-color: #121212;
-    color:white;
-
-
-}
-
-/* Acima, é determinado as cores para o tema escuro da página */
 
 
 header{
@@ -43,9 +43,66 @@ main{
 
 }
 
+main button{
+
+    margin:20px;
+    border-color : black;
+    background-color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+
 footer a img{
 
     width: 50px;
     height: 50px;
 
 }
+
+button {
+
+
+    border-color : black;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor:pointer;
+
+}
+
+main button:hover {
+
+    border-color: white;
+    background-color:black;
+    color:white;
+    transform: scale(1.3);
+
+}
+
+body.dark-mode{
+
+    background-color: #121212;
+    color:white;
+
+
+}
+
+body.dark-mode main button{
+
+    background-color: white;
+    color:black;
+    border-color:white;
+
+}
+
+body.dark-mode main button:hover{
+
+    background-color: black;
+    color:white;
+    border-color:black;
+    transform:scale(1.3);
+
+}
+
+/* Acima, é determinado as cores para o tema escuro da página */
