@@ -4,15 +4,31 @@ body{
     display:flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: white;
+    color:black;
+    transition: 0.3s;
+    
+
+
 
 }
 
+/* Acima eu determino as cores que serão o padrão da página, com a possibilidade de serem modificadas */
+
+body.dark-mode{
+
+    background-color: #121212;
+    color:white;
+
+
+}
+
+/* Acima, é determinado as cores para o tema escuro da página */
+
 
 header{
-
     display:flex;
     text-decoration:none;
-
 }
 
 header li{
@@ -24,5 +40,12 @@ header li{
 main{
 
     flex:1;
+
+}
+
+footer a img{
+
+    width: 50px;
+    height: 50px;
 
 }
