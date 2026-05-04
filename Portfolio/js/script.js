@@ -18,7 +18,15 @@ const NOME = "Luiz Gustavo";
 let tituloProfissional = "Garoto de Programa/ Faço de Tudo";
 let minhaBios = "Bacana demais. Prorrogamar é bom dms" + "Antes eu Sofria. Agora sou cria"
 let anoFormaturas = 2026;
+let mesFormatura = 12;
+let dia = 31;
 let anoIngresso = 2025;
+let mesIngresso = 2;
+let diaIngresso = 10;
+let hoje = new Date(); //Dia Atual
+let mesAtual = hoje.getmonth() + 1; //Mês Atual
+let anoAtual = hoje.getFullYear(); // Ano Atual
+let diaAtual = hoje.getDate(); //Dia Atual
 let indefinido;
 let nulo = null;
 let curso = {
