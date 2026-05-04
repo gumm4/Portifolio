@@ -1,0 +1,43 @@
+
+
+const botao = document.getElementById("modoClaroEscuro");
+const body = document.body;
+
+botao.addEventListener("click", () => {
+
+    body.classList.toggle("dark-mode");
+
+} );
+
+// Acima é criado as constantes do botão que irá mudar a cor tema da página, usando o id criado no arquivo HTML //
+// E temos a constante body, que pega diretamente da tag HTML, para fazer a transição de tema //
+
+//----------------------------------------------------------------------------------------------------//
+
+const NOME = "Luiz Gustavo";
+let tituloProfissional = "Garoto de Programa/ Faço de Tudo";
+let minhaBios = "Bacana demais. Prorrogamar é bom dms" + "Antes eu Sofria. Agora sou cria"
+let anoFormaturas = 2026;
+let anoIngresso = 2025;
+let indefinido;
+let nulo = null;
+let curso = {
+    nome: "Análise e Desenvolvimento de Sistemas",
+    ano:2026,
+    displinaAtual:"Linguagens de Programação"
+}
+
+console.log(typeof anoFormatura);
+console.log(typeof NOME);
+console.log(typeof tituloProfissional);
+console.log(typeof minhaBio);
+console.log(typeof anoIngresso);
+console.log(typeof indefinido);
+console.log(typeof nulo),
+console.log(typeof curso);
+
+
+document.getElementById("meuNome").innerText = NOME;
+document.getElementById("titulo").innerText = tituloProfissional;
+document.getElementById("minhaBio").innerText = minhaBios;
+document.getElementById("anoFormatura").innerText = anoFormaturas;
