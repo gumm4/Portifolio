@@ -35,6 +35,9 @@ let curso = {
     displinaAtual:"Linguagens de Programação"
 }
 
+
+
+
 console.log(typeof anoFormatura);
 console.log(typeof NOME);
 console.log(typeof tituloProfissional);
@@ -43,9 +46,13 @@ console.log(typeof anoIngresso);
 console.log(typeof indefinido);
 console.log(typeof nulo),
 console.log(typeof curso);
+console.log(typeof anoRestante);
+console.log(typeof mesRestante);
+console.log(typeof diaRestante);
 
 
 document.getElementById("meuNome").innerText = NOME;
 document.getElementById("titulo").innerText = tituloProfissional;
 document.getElementById("minhaBio").innerText = minhaBios;
 document.getElementById("anoFormatura").innerText = anoFormaturas;
+document.getElementById("tempoRestante").innerText = `Tempo restante para formatura: ${anoFormaturas - anoAtual} anos `;
