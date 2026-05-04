@@ -16,7 +16,7 @@ botao.addEventListener("click", () => {
 
 const NOME = "Luiz Gustavo";
 let tituloProfissional = "Garoto de Programa/ Faço de Tudo";
-let minhaBios = "Bacana demais. Prorrogamar é bom dms" + "Antes eu Sofria. Agora sou cria"
+let minhaBios = "Bacana demais. Prorrogamar é bom dms " + "Antes eu Sofria. Agora sou cria"
 let anoFormaturas = 2026;
 let mesFormatura = 12;
 let dia = 31;
@@ -24,7 +24,7 @@ let anoIngresso = 2025;
 let mesIngresso = 2;
 let diaIngresso = 10;
 let hoje = new Date(); //Dia Atual
-let mesAtual = hoje.getmonth() + 1; //Mês Atual
+let mesAtual = hoje.getMonth() + 1; //Mês Atual
 let anoAtual = hoje.getFullYear(); // Ano Atual
 let diaAtual = hoje.getDate(); //Dia Atual
 let indefinido;
@@ -33,18 +33,18 @@ let curso = {
     nome: "Análise e Desenvolvimento de Sistemas",
     ano:2026,
     displinaAtual:"Linguagens de Programação"
-}
+};
 
 
 
 
-console.log(typeof anoFormatura);
+console.log(typeof anoFormaturas);
 console.log(typeof NOME);
 console.log(typeof tituloProfissional);
-console.log(typeof minhaBio);
+console.log(typeof minhaBios);
 console.log(typeof anoIngresso);
 console.log(typeof indefinido);
-console.log(typeof nulo),
+console.log(typeof nulo);
 console.log(typeof curso);
 console.log(typeof anoRestante);
 console.log(typeof mesRestante);
@@ -55,4 +55,6 @@ document.getElementById("meuNome").innerText = NOME;
 document.getElementById("titulo").innerText = tituloProfissional;
 document.getElementById("minhaBio").innerText = minhaBios;
 document.getElementById("anoFormatura").innerText = anoFormaturas;
-document.getElementById("tempoRestante").innerText = `Tempo restante para formatura: ${anoFormaturas - anoAtual} anos `;
+document.getElementById("tempoRestante").innerText = `Tempo restante para formatura: ${anoAtual - anoIngresso} ano `;
+document.getElementById("mesRestante").innerText = `${mesFormatura - mesAtual} Meses`;
+document.getElementById("mesRestante").innerText = `${diaIngresso - diaAtual} Dias`;
