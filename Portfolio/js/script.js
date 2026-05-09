@@ -44,7 +44,6 @@ botao.addEventListener("click", () => {
                 
     //Estrutura de condicionais, onde cada uma mostrará uma mensagem com base no resultado do cálculo de tempo restante para finalizar o curso//
 
-    //Nesse if teremos que para 
     if (anoFormatura - anoAtual <=0) {
 
         document.getElementById("tempoRestante").innerText = ` Tempo restante para formatura: ${mesFormatura - mesAtual} Meses e ${diaIngresso - diaAtual} Dias `;
@@ -145,6 +144,59 @@ let pontosBack   = 0;
         resultadoQuiz.textContent = "🔄 Perfil Full Stack — você é dos dois!";
     }
 }*/ 
+
+
+for (let i = 0; i<=20; i++) {
+    let pares = (i % 2 === 0) ? "Par" : "Ímpar";
+    console.log(`${i} é ${pares}`);
+}
+
+let object = {
+
+    nome:"Luiz Gustavo",
+    idade:"18",
+    curso:"Análise e Desenvolvimento de Sistemas"
+}
+
+for (let chave in object) {
+    document.write(`<p>${chave}: ${object[chave]}</p>`);
+}
+
+let aluno = ["Luiz","Lucas","Otávio","Maria","Felipe"];
+for (let contem of aluno) {
+
+    if (contem === "Luiz") {
+        document.write(`<p>${contem} - Presente:</p>`);
+    } else {
+        document.write(`<p>${contem} - Ausente:</p>`);
+    }
+
+}
+
+let num = parseInt(prompt("Digite um número par:"));
+while (num % 2 !== 0) {
+    num = parseInt(prompt("Esse número não é par. Tente Novamente:"));
+};
+
+do {
+    num = prompt("Diga um número par:");
+} while (num % 2 !== 0);
+
+
+let objectt = {
+
+    "Habilidades Tecnicas": ["HTML", "CSS", "JavaScript", "Python"],
+    "Habilidades Interpessoais": ["Comunicação", "Resolução de Problemas", "Trabalho em Equipe"],
+    "Habilidades de Aprendizado": ["Curiosidade", "Adaptabilidade","Autodidatismo"]
+
+};
+
+for (let categoria in objectt) {
+
+    document.write(`<h3>${categoria}</h3>`);
+    for (let habilidade of objectt[categoria])
+        document.write(`<p>${habilidade}</p>`);
+};
 
     console.log(typeof anoFormatura);
     console.log(typeof NOME);
