@@ -198,6 +198,61 @@ for (let categoria in objectt) {
         document.write(`<p>${habilidade}</p>`);
 };
 
+let projetos = [
+        {
+            nome: "Parking N' Space",
+            descricao: "Sistema para gerenciar vagas de estacionamento, com controle de entrada e saída de veículos.",
+            conhecimentos: ["GitHub", "Pip", "PyInstaller"],
+            tecnologias: ["Python", "Sqlite", "Tkinter", "CustomTkinter", "FPDF", "Pip", "PyInstaller"]
+        },
+        {
+            nome: "Controle de Aluguel de Quadras",
+            descricao: "Sistema para gerenciar o aluguel de quadras esportivas, com controle de reservas e pagamentos.",
+            conhecimentos: ["GitHub", "Pip", "PyInstaller"],
+            tecnologias: ["Python", "Sqlite", "Tkinter", "CustomTkinter", "FPDF", "Pip", "PyInstaller"]
+        },
+        {
+            nome:"Página Pessoal Baseada em Blue Lock",
+            descricao: "Projeto de página pessoal inspirado na série de anime e mangá Blue Lock, onde o objetivo é criar uma página que reflita a personalidade e os interesses do criador, utilizando elementos visuais e temáticos relacionados à série.",
+            conhecimentos: ["GitHub", "HTML", "CSS", "JavaScript"],
+            tecnologias: ["HTML", "CSS", "JavaScript"]
+        },
+    ]
+
+
+    projetos.forEach(function(projeto) { // - - Itera sobre cada projeto na lista
+    document.write(`<h3>${projeto.nome}</h3>`); // - - Imprime o nome do projeto como título
+    document.write(`<p>${projeto.descricao}</p>`); // - - Imprime a descrição do projeto em um parágrafo
+    document.write(`<p><strong>Conhecimentos:</strong> ${projeto.conhecimentos.join(", ")}</p>`); // - - Imprime os conhecimentos necessários para o projeto
+    document.write(`<p><strong>Tecnologias:</strong> ${projeto.tecnologias.join(", ")}</p>`); // - - Imprime as tecnologias utilizadas no projeto
+    });
+
+    // projetos que usam Python usando somente foreach e include:
+    document.write(`<h2>Projetos que utilizam Python:</h2>`); // - - Título para a seção de projetos com Python 
+    projetos.forEach(function(projeto) { // - - Itera sobre cada projeto na lista
+        if (projeto.tecnologias.includes("Python")) { // - - Verifica se o projeto utiliza Python
+            document.write(`<h3>${projeto.nome}</h3>`); // - - Imprime o nome do projeto como título
+            document.write(`<p>${projeto.descricao}</p>`); // - - Imprime a descrição do projeto em um parágrafo
+            document.write(`<p><strong>Conhecimentos:</strong> ${projeto.conhecimentos.join(", ")}</p>`); // - - Imprime os conhecimentos necessários para o projeto
+            document.write(`<p><strong>Tecnologias:</strong> ${projeto.tecnologias.join(", ")}</p>`); // - - Imprime as tecnologias utilizadas no projeto
+        }
+    });
+
+    document.write(`<h2>Projetos que utilizam html:</h2>`); // - - Título para a seção de projetos com html
+    projetos.forEach(function(projeto) { // - - Itera sobre cada projeto na lista
+        if (projeto.tecnologias.includes("HTML")) { // - - Verifica se o projeto utiliza HTML
+            document.write(`<h3>${projeto.nome}</h3>`); // - - Imprime o nome do projeto como título
+            document.write(`<p>${projeto.descricao}</p>`); // - - Imprime a descrição do projeto em um parágrafo
+            document.write(`<p><strong>Conhecimentos:</strong> ${projeto.conhecimentos.join(", ")}</p>`); // - - Imprime os conhecimentos necessários para o projeto
+            document.write(`<p><strong>Tecnologias:</strong> ${projeto.tecnologias.join(", ")}</p>`); // - - Imprime as tecnologias utilizadas no projeto -- . join transforma o array em uma string, separando os elementos por vírgula e espaço (", ")
+        }
+    });
+
+    document.createElement("h2").innerText = projetos[0].nome; // - - Cria um elemento h2 e define seu texto como o nome do primeiro projeto
+    console.log(projetos[0].descricao); // - - Imprime a descrição do primeiro projeto no console
+    console.log(projetos[0].conhecimentos); // - - Imprime os conhecimentos necessários para o primeiro projeto no console
+    console.log(projetos[0].tecnologias); // - - Imprime as tecnologias utilizadas no primeiro projeto no console
+
     console.log(typeof anoFormatura);
     console.log(typeof NOME);
     console.log(typeof tituloProfissional);
