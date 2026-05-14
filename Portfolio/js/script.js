@@ -40,31 +40,42 @@ botao.addEventListener("click", () => {
     document.getElementById("minhaIntroducao").innerText = introducao;
     document.getElementById("minhaBio").innerText = minhaBios;
     document.getElementById("anoFormatura").innerText = anoFormatura;
-    document.getElementById("tempoRestante").innerText = `Tempo restante para formatura: ${anoAtual - anoIngresso} Ano, ${mesFormatura - mesAtual} Meses e ${diaIngresso - diaAtual} Dias `;
+
                 
     //Estrutura de condicionais, onde cada uma mostrará uma mensagem com base no resultado do cálculo de tempo restante para finalizar o curso//
 
-    if (anoFormatura - anoAtual <=0) {
+    function calculoRestante(){
 
-        document.getElementById("tempoRestante").innerText = ` Tempo restante para formatura: ${mesFormatura - mesAtual} Meses e ${diaIngresso - diaAtual} Dias `;
+        let anosRestantes = anoFormatura - anoAtual;
+        let mesesRestantes = mesFormatura - mesAtual;
+        let diasRestantes = diaFormatura - diaAtual;
 
-    }   else if (anoFormatura - anoAtual === 1) {
+        if (anosRestantes < 0  || (anosRestantes === 0 && mesesRestantes < 0) || (anosRestantes === 0 && mesesRestantes == 0 && diasRestantes <= 0)) {
 
-        document.getElementById("tempoRestante").innerText =`Tempo restante para formatura: ${anoAtual - anoIngresso} Ano, ${mesFormatura - mesAtual} Meses e ${diaIngresso - diaAtual} Dias`;
+            document.getElementById("tempoRestante").innerText = `Curso Concluído`;
 
-    } else {
-        document.getElementById("tempoRestante").innerText = `Tempo restante para formatura: ${anoAtual - anoIngresso} Anos, ${mesFormatura - mesAtual} Meses e ${diaIngresso - diaAtual} Dias`;
-    }
+        } else {
 
-    let diasRestantes = diaFormatura - diaAtual;
-    let mesesRestantes = mesFormatura - mesAtual;
-    let anosRestantes = anoFormatura - anoAtual;
+            document.getElementById("tempoRestante").innerText = `Tempo restante para a formatura: ${anosRestantes} ano(s), ${mesesRestantes} meses e ${diasRestantes} dias`;
+        }
 
-    if (diasRestantes <=0 && mesesRestantes <=0 && anosRestantes <= 0) {
+    };
 
-            document.getElementById("tempoRestante").innerText = `Curso Concluído!`;
+    function notasAula() {
 
-    }
+        let nota = 8;
+        
+        if (nota <0) {
+
+            document.write(`<p> Reprovado</P>`)
+
+        } else {
+
+            document.write(`<p>Aprovado</p>`)
+
+        }
+
+    };
 
     let nota = 8;
     let aprovado = (nota >=6)? "Aprovado" : "Reprovado";
@@ -253,16 +264,5 @@ let projetos = [
     console.log(projetos[0].conhecimentos); // - - Imprime os conhecimentos necessários para o primeiro projeto no console
     console.log(projetos[0].tecnologias); // - - Imprime as tecnologias utilizadas no primeiro projeto no console
 
-    console.log(typeof anoFormatura);
-    console.log(typeof NOME);
-    console.log(typeof tituloProfissional);
-    console.log(typeof minhaBios);
-    console.log(typeof anoIngresso);
-    console.log(typeof indefinido);
-    console.log(typeof nulo);
-    console.log(typeof curso);
-    console.log(typeof anosRestantes);
-    console.log(typeof mesesRestantes);
-    console.log(typeof diasRestantes);
-    console.log(typeof introducao);
+    calculoRestante()
 

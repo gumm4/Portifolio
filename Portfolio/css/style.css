@@ -195,14 +195,11 @@ header ul{
     display:grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-
     "bio estacionamento"
-     
     ;
     margin:15px;
     border-radius:5px;
     background-color:rgba(243, 41, 41, 0.637);
-    width:400px;
 }
 
 .projeto {
@@ -215,7 +212,6 @@ header ul{
 
 .estacionamento{
     grid-area:estacionamento;
-    justify-content:center;
 }
 
 .bio{
