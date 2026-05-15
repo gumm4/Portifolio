@@ -77,28 +77,30 @@ botao.addEventListener("click", () => {
 
     };
 
-    let nota = 8;
-    let aprovado = (nota >=6)? "Aprovado" : "Reprovado";
 
-    document.write(`<p> Nota: ${nota} - ${aprovado} </p>`);
+    document.write(`<p>Situação: ${notasAula()}</p>`);
 
-    let diaSemana = hoje.getDay() + 1;
+    function semanaDia(){
 
-    let diaEscrito;
+        let diaSemana = hoje.getDay() + 1;
+
+        let diaEscrito;
 
     
-    switch (diaSemana) {
-        case 1:  diaEscrito = "Domingo"; break;
-        case 2:  diaEscrito ="Segunda-Feira"; break;
-        case 3:  diaEscrito ="Terça-Feira"; break;
-        case 4:  diaEscrito ="Quarta-Feira"; break;
-        case 5:  diaEscrito ="Quinta-Feira"; break;
-        case 6:  diaEscrito ="Sexta-Feira"; break;
-        case 7:  diaEscrito ="Sábado"; break;
-        default: diaEscrito ="Dia Inválido";
+        switch (diaSemana) {
+            case 1:  diaEscrito = "Domingo"; break;
+            case 2:  diaEscrito ="Segunda-Feira"; break;
+            case 3:  diaEscrito ="Terça-Feira"; break;
+            case 4:  diaEscrito ="Quarta-Feira"; break;
+            case 5:  diaEscrito ="Quinta-Feira"; break;
+            case 6:  diaEscrito ="Sexta-Feira"; break;
+            case 7:  diaEscrito ="Sábado"; break;
+            default: diaEscrito ="Dia Inválido";
+        }
+
     }
 
-    document.write(`<p> Hoje é: ${diaEscrito} </p>`);
+    document.write(`<p>${semanaDia()}</p>`);
 /*
 
 const btnVisual      = document.getElementById("btn-visual");
